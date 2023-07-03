@@ -1,38 +1,133 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.app {
+  padding: 40px;
+  background: url('../public/polynesia-3021072_1280.jpg') center center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+.app::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #fff;
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.app-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.app-title {
+  margin-bottom: 1em;
+  /* -webkit-text-stroke: 1px #89caff; */
+  color: #fff;
+  text-shadow: 1px 1px 1px 1px #fff;
+  text-shadow: 0px 0px 8px #fff;
+  letter-spacing: 0.05em;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-desc {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  max-width: 100%;
+  width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 60px;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.add-area {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.app-container input[type="text"] {
+  padding: 1em;
+  font-size: 1.2rem;
+  border: 2px solid #aeaeae;
+  border-radius: 8px;
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+}
+
+.app-container input[type="text"]::placeholder {
+  color: #aeaeae;
+}
+
+.search-area {
+  margin-bottom: 60px;
+}
+/* 
+.search-form-area input {
+  width: 300px;
+  margin-left: auto;
+} */
+
+.todo-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.todo-item {
+  padding: 1em 0;
+  border-top: 1px dashed currentColor;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item button {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-item:last-child {
+  border-bottom: 1px dashed currentColor;
+}
+
+.todo-delete-button {
+  appearance: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: #ff4242;
+  border: 1px solid currentColor;
+  padding: 0.3em 1.2em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.todo-delete-button:hover {
+  background-color: #ff4242;
+  color: #fff;
 }
